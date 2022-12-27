@@ -1,3 +1,4 @@
+import { About } from 'components/About';
 import { Header } from 'components/Header';
 import { HomeHero } from 'components/HomeHero';
 
@@ -11,6 +12,10 @@ export function HomeTemplate() {
       <main className="container">
         <HomeHero />
       </main>
+
+      <section>
+        <About />
+      </section>
     </S.Container>
   );
 }

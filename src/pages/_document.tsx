@@ -41,6 +41,9 @@ export default class MyDocument extends Document {
     return (
       <Html lang="pt-br">
         <Head>
+          <title>Rafael Souza - Portfolio</title>
+          <link rel="icon" type="image/x-icon" href="./img/Rafael-Souza.svg" />
+
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
