@@ -1,4 +1,5 @@
 import { Header } from 'components/Header';
+import { HomeHero } from 'components/HomeHero';
 
 import * as S from './styles';
 
@@ -7,7 +8,7 @@ export function HomeTemplate() {
     <S.Container>
       <Header />
 
-      <main>
+      <main className="container">
         <HomeHero />
       </main>
     </S.Container>
