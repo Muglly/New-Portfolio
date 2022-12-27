@@ -1,5 +1,5 @@
-import { Header } from 'components/Header';
+import { HomeTemplate } from 'templates/Home/HomeTemplate';
 
 export default function Home() {
-  return <Header />;
+  return <HomeTemplate />;
 }
