@@ -11,11 +11,8 @@ export function HomeTemplate() {
 
       <main className="container">
         <HomeHero />
-      </main>
-
-      <section>
         <About />
-      </section>
+      </main>
     </S.Container>
   );
 }
