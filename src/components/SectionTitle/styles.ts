@@ -28,6 +28,16 @@ export const Container = styled.div`
     }
   }
 
+  @media (max-width: 700px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+
   @media (max-width: 500px) {
     h1 {
       font-size: 1.8rem;
