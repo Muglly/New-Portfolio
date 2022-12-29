@@ -6,6 +6,7 @@ import { AiFillHtml5, AiOutlineGithub } from 'react-icons/ai';
 import { IoLogoCss3, IoLogoFirebase, IoLogoJavascript } from 'react-icons/io5';
 import {
   SiExpo,
+  SiFigma,
   SiGraphql,
   SiJest,
   SiNextdotjs,
@@ -31,6 +32,7 @@ export function Knowledge() {
         <KnowItem title="EXPO" icon={<SiExpo />} />
         <KnowItem title="STYLED COMPONENTS" icon={<SiStyledcomponents />} />
         <KnowItem title="TAILWIND" icon={<SiTailwindcss />} />
+        <KnowItem title="FIGMA" icon={<SiFigma />} />
         <KnowItem title="FIREBASE" icon={<IoLogoFirebase />} />
         <KnowItem title="JEST" icon={<SiJest />} />
         <KnowItem title="GIT/GITHUB" icon={<AiOutlineGithub />} />

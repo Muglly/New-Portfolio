@@ -1,5 +1,6 @@
 import { About } from 'components/About';
 import { Header } from 'components/Header';
+import { Footer } from 'components/Footer';
 import { Project } from 'components/Project';
 import { HomeHero } from 'components/HomeHero';
 import { Knowledge } from 'components/Knowledge';
@@ -17,6 +18,7 @@ export function HomeTemplate() {
         <Project />
         <Knowledge />
       </main>
+      <Footer />
     </S.Container>
   );
 }
