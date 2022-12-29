@@ -1,22 +1,17 @@
 import Link from 'next/link';
 import { AiOutlineRightCircle } from 'react-icons/ai';
-import * as S from './styles';
+import { ProjectItemProps } from 'components/ProjectSingle';
 
-type ProjectItemProps = {
-  title: string;
-  type: string;
-  slug: string;
-  img: string;
-};
+import * as S from './styles';
 
 export default function ProjectItem({
   title,
   type,
   slug,
-  img,
+  imgUrl,
 }: ProjectItemProps) {
   return (
-    <S.ProjectContainer imgUrl={img}>
+    <S.ProjectContainer imgUrl={imgUrl}>
       <section>
         <div className="overlay" />
         <div className="text">
