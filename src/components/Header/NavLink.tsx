@@ -2,14 +2,28 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import * as S from './styles';
 
-export type NavLinkProps = {
+type NavLinkProps = {
   title: string;
   path: string;
+  includes?: boolean;
 };
 
-export default function NavLink({ title, path }: NavLinkProps) {
+export default function NavLink({
+  title,
+  path,
+  includes = false,
+}: NavLinkProps) {
   const router = useRouter();
-  const isActive = router.pathname === path;
+
+  const verifyIfIsActive = () => {
+    if (includes) {
+      return router.pathname.includes(path);
+    }
+
+    return router.pathname === path;
+  };
+
+  const isActive = verifyIfIsActive();
 
   return (
     <S.NavLinkContainer isActive={isActive}>

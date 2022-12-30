@@ -1,3 +1,4 @@
+import { darken } from 'polished';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -11,5 +12,63 @@ export const Container = styled.div`
     margin-bottom: 2rem;
     width: 100%;
     padding: 0 5rem;
+
+    p {
+      color: ${({ theme }) => theme.textLight};
+      font-size: 1.5rem;
+      font-weight: 300;
+      text-align: justify;
+    }
+
+    > div {
+      display: flex;
+      gap: 2rem;
+    }
+
+    button {
+      background: ${({ theme }) => theme.primary};
+      width: 100%;
+      max-width: 23rem;
+      padding: 0.8rem 2.5rem;
+      border-radius: 0.5rem;
+      border: none;
+      transition: 0.5s;
+      margin-top: 2rem;
+
+      &:hover {
+        background: ${({ theme }) => darken(0.05, theme.primary)};
+      }
+
+      a {
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        font-weight: 300;
+      }
+    }
+
+    @media (max-width: 700px) {
+      padding: 0 2.5rem;
+
+      p {
+        font-size: 1rem;
+      }
+
+      button {
+        padding: 0.7rem 2rem;
+        a {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 400px) {
+    > main {
+      div {
+        flex-wrap: wrap;
+        gap: 0;
+      }
+    }
   }
 `;

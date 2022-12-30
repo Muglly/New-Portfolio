@@ -8,7 +8,11 @@ export function ProjectTemplate() {
   return (
     <S.Container>
       <Header />
-      <ProjectBanner />
+      <ProjectBanner
+        title="Projeto 1"
+        type="Website"
+        imgUrl="https://images.unsplash.com/photo-1508138221679-760a23a2285b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+      />
 
       <main>
         <p>
@@ -18,9 +22,14 @@ export function ProjectTemplate() {
           provident!
         </p>
 
-        <button>
-          <Link href="#"> Ver projeto online</Link>
-        </button>
+        <div>
+          <button>
+            <Link href="#"> Ver projeto online</Link>
+          </button>
+          <button>
+            <Link href="#"> Ver repsitório</Link>
+          </button>
+        </div>
       </main>
     </S.Container>
   );

@@ -5,7 +5,7 @@ import * as S from './styles';
 export type ProjectItemProps = {
   title: string;
   type: string;
-  slug: string;
+  slug?: string;
   imgUrl: string;
 };
 
