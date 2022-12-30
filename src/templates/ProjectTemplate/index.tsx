@@ -1,5 +1,6 @@
-import { Header } from 'components/Header';
 import Link from 'next/link';
+import { Header } from 'components/Header';
+import { ProjectBanner } from 'components/ProjectBanner';
 
 import * as S from './styles';
 
