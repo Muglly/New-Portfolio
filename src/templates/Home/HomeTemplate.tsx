@@ -1,7 +1,7 @@
 import { About } from 'components/About';
 import { Header } from 'components/Header';
 import { Footer } from 'components/Footer';
-import { Project } from 'components/Project';
+import { SectionProject } from 'components/SectionProject';
 import { HomeHero } from 'components/HomeHero';
 import { Knowledge } from 'components/Knowledge';
 
@@ -15,7 +15,7 @@ export function HomeTemplate() {
       <main className="container">
         <HomeHero />
         <About />
-        <Project />
+        <SectionProject />
         <Knowledge />
       </main>
       <Footer />

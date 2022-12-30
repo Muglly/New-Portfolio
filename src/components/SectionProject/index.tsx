@@ -3,7 +3,7 @@ import Link from 'next/link';
 import ProjectItem from './ProjectItem';
 import * as S from './styles';
 
-export function Project() {
+export function SectionProject() {
   return (
     <S.Container>
       <SectionTitle title="#Ultimos Projetos" />

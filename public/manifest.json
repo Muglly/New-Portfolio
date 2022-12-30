@@ -1,21 +1,16 @@
 {
-  "name": "NextJS - Boilerplate",
-  "short_name": "NextJS",
+  "name": "Rafael Souza - Portfolio",
+  "short_name": "Portfolio",
   "icons": [
     {
-      "src": "/img/icon-192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "/img/icon-512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "src": "/img/Rafael-Souza.svg",
+      "type": "image/svg",
+      "sizes": "181x208"
     }
   ],
-  "background_color": "#06092B",
-  "description": "A project starter to work with TypeScript, React, NextJS and Styled Components",
+  "background_color": "#11172B",
+  "description": "Portfolio of my projects ",
   "display": "fullscreen",
   "start_url": "/",
-  "theme_color": "#06092B"
+  "theme_color": "#11172B"
 }
