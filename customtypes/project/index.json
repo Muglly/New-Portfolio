@@ -1,0 +1,62 @@
+{
+  "id": "project",
+  "label": "Project",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "Slug",
+          "placeholder": ""
+        }
+      },
+      "title": {
+        "type": "Text",
+        "config": {
+          "label": "Title",
+          "placeholder": ""
+        }
+      },
+      "description": {
+        "type": "Text",
+        "config": {
+          "label": "Description",
+          "placeholder": ""
+        }
+      },
+      "type": {
+        "type": "Text",
+        "config": {
+          "label": "Type",
+          "placeholder": ""
+        }
+      },
+      "link": {
+        "type": "Link",
+        "config": {
+          "label": "Project Online",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "repositorio": {
+        "type": "Link",
+        "config": {
+          "label": "Repositorio",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "thumbnail": {
+        "type": "Image",
+        "config": {
+          "label": "Thumbnail",
+          "constraint": {},
+          "thumbnails": []
+        }
+      }
+    }
+  }
+}
