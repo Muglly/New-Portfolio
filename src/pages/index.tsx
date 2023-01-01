@@ -1,9 +1,10 @@
 import Prismic from '@prismicio/client';
+import { ProjectsProps } from 'components/SectionProject';
 import { GetStaticProps } from 'next/types';
 import { getPrismicClient } from 'services/prismic';
-import { HomeProps, HomeTemplate } from 'templates/Home/HomeTemplate';
+import { HomeTemplate } from 'templates/Home/HomeTemplate';
 
-export default function Home({ projects }: HomeProps) {
+export default function Home({ projects }: ProjectsProps) {
   return <HomeTemplate projects={projects} />;
 }
 
@@ -15,8 +16,7 @@ export const getStaticProps: GetStaticProps = async () => {
     { orderings: '[document.first_publication_date desc]' }
   );
 
-  console.log(projectResponse.results);
-  const project = projectResponse.results.map((project) => ({
+  const projects = projectResponse.results.map((project) => ({
     slug: project.uid,
     title: project.data.title,
     type: project.data.type,
@@ -28,7 +28,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: {
-      project,
+      projects,
     },
     revalidate: 86400,
   };
