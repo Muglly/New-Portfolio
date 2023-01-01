@@ -2050,7 +2050,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@prismicio/client@npm:^6.6, @prismicio/client@npm:^6.7.3":
+"@prismicio/client@npm:5.1.0":
+  version: 5.1.0
+  resolution: "@prismicio/client@npm:5.1.0"
+  dependencies:
+    cross-fetch: ^3.0.6
+  checksum: b30b2127924dd4abe189ef424d81a2bb24b7a1ecefc09d1fad79115278c87e3dcc7eeb0601cce64e0b9269e6ab8a5f18e14cd951f08c8532ef4b39c595c8e5dd
+  languageName: node
+  linkType: hard
+
+"@prismicio/client@npm:^6.6":
   version: 6.7.3
   resolution: "@prismicio/client@npm:6.7.3"
   dependencies:
@@ -5917,7 +5926,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cross-fetch@npm:3.1.5":
+"cross-fetch@npm:3.1.5, cross-fetch@npm:^3.0.6":
   version: 3.1.5
   resolution: "cross-fetch@npm:3.1.5"
   dependencies:
@@ -11799,7 +11808,7 @@ eslint@latest:
     "@babel/core": ^7.20.5
     "@babel/preset-typescript": ^7.18.6
     "@mdx-js/react": ^1.6.22
-    "@prismicio/client": ^6.7.3
+    "@prismicio/client": 5.1.0
     "@prismicio/helpers": ^2.3.8
     "@prismicio/next": ^1.0.2
     "@prismicio/react": ^2.5.1
