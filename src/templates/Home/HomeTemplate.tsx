@@ -7,7 +7,21 @@ import { Knowledge } from 'components/Knowledge';
 
 import * as S from './styles';
 
-export function HomeTemplate() {
+type IProject = {
+  slug: string;
+  title: string;
+  type: string;
+  description: string;
+  link: string;
+  repositorio: string;
+  thumbnail: string;
+};
+
+export type HomeProps = {
+  projects: IProject[];
+};
+
+export function HomeTemplate({ projects }: HomeProps) {
   return (
     <S.Container>
       <Header />
