@@ -6,6 +6,8 @@ import { ProjectBanner } from 'components/ProjectBanner';
 import * as S from './styles';
 
 export function ProjectTemplate({ project }: ProjectProps) {
+  console.log(project.repositorio);
+
   return (
     <S.Container>
       <Header />

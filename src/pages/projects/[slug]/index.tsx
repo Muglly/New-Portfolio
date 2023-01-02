@@ -2,8 +2,14 @@ import Prismic from '@prismicio/client';
 import { getPrismicClient } from 'services/prismic';
 import { useRouter } from 'next/dist/client/router';
 import { LoadingScreen } from 'components/LoadingScreen';
-import { GetStaticPaths, GetStaticProps } from 'next/types';
+import { GetStaticPaths } from 'next/types';
 import { ProjectTemplate } from 'templates/ProjectTemplate';
+
+type SlugProps = {
+  params: {
+    slug: string;
+  };
+};
 
 type IProject = {
   slug: string;
@@ -46,9 +52,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps = async ({ params }: SlugProps) => {
   const prismic = getPrismicClient();
-  const { slug } = context.params;
+  const { slug } = params;
 
   const response = await prismic.getByUID('project', String(slug), {});
 
@@ -58,7 +64,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
     type: response.data.type,
     description: response.data.description,
     link: response.data.link.url,
-    repositorio: response.data.link.url,
+    repositorio: response.data.repositorio.url,
     thumbnail: response.data.thumbnail.url,
   };
 
