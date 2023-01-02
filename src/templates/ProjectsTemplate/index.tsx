@@ -1,36 +1,23 @@
 import { Header } from 'components/Header';
 import ProjectSingle from 'components/ProjectSingle';
+import { ProjectsProps } from 'components/SectionProject';
+
 import * as S from './styles';
 
-export function ProjectsTemplate() {
+export function ProjectsTemplate({ projects }: ProjectsProps) {
   return (
     <S.ProjectsContainer>
       <Header />
       <main className="container">
-        <ProjectSingle
-          title="Projeto 1"
-          type="Website"
-          slug="test"
-          imgUrl="https://images.unsplash.com/photo-1508138221679-760a23a2285b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
-        />
-        <ProjectSingle
-          title="Projeto 1"
-          type="Website"
-          slug="test"
-          imgUrl="https://images.unsplash.com/photo-1508138221679-760a23a2285b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
-        />
-        <ProjectSingle
-          title="Projeto 1"
-          type="Website"
-          slug="test"
-          imgUrl="https://images.unsplash.com/photo-1508138221679-760a23a2285b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
-        />
-        <ProjectSingle
-          title="Projeto 1"
-          type="Website"
-          slug="test"
-          imgUrl="https://images.unsplash.com/photo-1508138221679-760a23a2285b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
-        />
+        {projects.map(({ title, type, slug, thumbnail }) => (
+          <ProjectSingle
+            key={`project-${slug}`}
+            title={title}
+            type={type}
+            slug={slug}
+            imgUrl={thumbnail}
+          />
+        ))}
       </main>
     </S.ProjectsContainer>
   );

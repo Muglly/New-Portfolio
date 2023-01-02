@@ -1,7 +1,7 @@
 import Prismic from '@prismicio/client';
-import { ProjectsProps } from 'components/SectionProject';
 import { GetStaticProps } from 'next/types';
 import { getPrismicClient } from 'services/prismic';
+import { ProjectsProps } from 'components/SectionProject';
 import { HomeTemplate } from 'templates/Home/HomeTemplate';
 
 export default function Home({ projects }: ProjectsProps) {
