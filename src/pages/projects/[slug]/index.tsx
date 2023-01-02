@@ -1,6 +1,7 @@
 import Prismic from '@prismicio/client';
 import { getPrismicClient } from 'services/prismic';
 import { useRouter } from 'next/dist/client/router';
+import { LoadingScreen } from 'components/LoadingScreen';
 import { GetStaticPaths, GetStaticProps } from 'next/types';
 import { ProjectTemplate } from 'templates/ProjectTemplate';
 
