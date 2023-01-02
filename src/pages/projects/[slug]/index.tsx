@@ -1,11 +1,30 @@
 import Prismic from '@prismicio/client';
-import { GetStaticPaths, GetStaticProps } from 'next/types';
 import { getPrismicClient } from 'services/prismic';
-import { ProjectsProps } from 'components/SectionProject';
+import { useRouter } from 'next/dist/client/router';
+import { GetStaticPaths, GetStaticProps } from 'next/types';
 import { ProjectTemplate } from 'templates/ProjectTemplate';
 
-export default function Project() {
-  return <ProjectTemplate />;
+type IProject = {
+  slug: string;
+  title: string;
+  type: string;
+  description: string;
+  link: string;
+  repositorio: string;
+  thumbnail: string;
+};
+
+export type ProjectProps = {
+  project: IProject;
+};
+
+export default function Project({ project }: ProjectProps) {
+  const router = useRouter();
+  if (router.isFallback) {
+    return <LoadingScreen />;
+  }
+
+  return <ProjectTemplate project={project} />;
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -32,20 +51,20 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
   const response = await prismic.getByUID('project', String(slug), {});
 
-  console.log('>>>>>', response);
-
-  // const projects = projectResponse.results.map((project) => ({
-  //   slug: project.uid,
-  //   title: project.data.title,
-  //   type: project.data.type,
-  //   description: project.data.description,
-  //   link: project.data.link.url,
-  //   repositorio: project.data.link.url,
-  //   thumbnail: project.data.thumbnail.url,
-  // }));
+  const project = {
+    slug: response.uid,
+    title: response.data.title,
+    type: response.data.type,
+    description: response.data.description,
+    link: response.data.link.url,
+    repositorio: response.data.link.url,
+    thumbnail: response.data.thumbnail.url,
+  };
 
   return {
-    props: {},
+    props: {
+      project,
+    },
     revalidate: 86400,
   };
 };

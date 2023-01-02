@@ -4,7 +4,7 @@ import { SectionTitle } from 'components/SectionTitle';
 
 import * as S from './styles';
 
-type IProject = {
+export type IProject = {
   slug: string;
   title: string;
   type: string;
