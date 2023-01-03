@@ -14,12 +14,12 @@ export function HomeTemplate({ projects }: ProjectsProps) {
       <NextSeo
         title="Home | Rafael Souza"
         description="Meu portfolio, onde faço um breve resumo sobre mim e mostros algus projetos que já fiz."
-        canonical="https://rafaelsouza.vercel.app/"
+        canonical="https://rpsuza.vercel.app/"
         openGraph={{
-          url: 'https://rafaelsouza.vercel.app/',
+          url: 'https://rpsuza.vercel.app/',
           images: [
             {
-              url: 'https://raw.githubusercontent.com/Muglly/New-Portfolio/master/public/img/Home.PNG',
+              url: 'https://rpsuza.vercel.app/img/Home.PNG',
               width: 1280,
               height: 720,
               alt: 'Rafael Souza | Portfolio',

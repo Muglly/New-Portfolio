@@ -12,9 +12,9 @@ export function ProjectTemplate({ project }: ProjectProps) {
       <NextSeo
         title={`Projeto - ${project.title}`}
         description={project.description}
-        canonical="https://rafaelsouzaportfolio.com"
+        canonical="https://rpsuza.vercel.app/"
         openGraph={{
-          url: 'https://rafaelsouzaportfolio.com',
+          url: 'https://rpsuza.vercel.app/',
 
           images: [
             {

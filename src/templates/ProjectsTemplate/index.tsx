@@ -11,9 +11,9 @@ export function ProjectsTemplate({ projects }: ProjectsProps) {
       <NextSeo
         title="Projetos | Rafael Souza"
         description="Aguns dos projetos que já de senvolvi, que estão online."
-        canonical="https://rafaelsouzaportfolio.com"
+        canonical="https://rpsuza.vercel.app/"
         openGraph={{
-          url: 'https://rafaelsouzaportfolio.com',
+          url: 'https://rpsuza.vercel.app/',
         }}
       />
       <Header />

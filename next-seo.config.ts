@@ -2,7 +2,7 @@ export default {
   openGraph: {
     type: 'website',
     locale: 'pt-BR',
-    url: 'https://rafaelsouza.vercel.app/',
+    url: 'https://rpsuza.vercel.app/',
     siteName: 'Rafael Souza | Portfolio',
   },
   twitter: {
