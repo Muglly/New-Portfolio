@@ -16,8 +16,8 @@ export function AboutItem() {
         <p>
           Desenvolvo projetos tanto para Web 🌐 com <strong>React.js</strong>,
           quanto para mobile 📱 de forma nativa com
-          <strong> React Native</strong>, ultilizando as principais tecnologias
-          e as melhores praticas.
+          <strong> React Native</strong>, utilizando as principais tecnologias e
+          as melhores práticas.
         </p>
       </div>
 
