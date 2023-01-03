@@ -5,8 +5,9 @@ import { ThemeProvider } from 'styled-components';
 import theme from 'styles/theme';
 import GlobalStyles from 'styles/global';
 
-import SEO from '../../next-seo.config';
 import { DefaultSeo } from 'next-seo';
+import SEO from '../../next-seo.config';
+import NextNProgress from 'nextjs-progressbar';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -26,6 +27,12 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
       <DefaultSeo {...SEO} />
       <GlobalStyles />
+      <NextNProgress
+        color="#0EE7B7"
+        startPosition={0.3}
+        stopDelayMs={200}
+        height={3}
+      />
       <Component {...pageProps} />
     </ThemeProvider>
   );
