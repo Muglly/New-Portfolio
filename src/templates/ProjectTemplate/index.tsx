@@ -4,10 +4,27 @@ import { ProjectProps } from 'pages/projects/[slug]';
 import { ProjectBanner } from 'components/ProjectBanner';
 
 import * as S from './styles';
+import { NextSeo } from 'next-seo';
 
 export function ProjectTemplate({ project }: ProjectProps) {
   return (
     <S.Container>
+      <NextSeo
+        title={`Projeto - ${project.title}`}
+        description={project.description}
+        canonical="https://rafaelsouzaportfolio.com"
+        openGraph={{
+          url: 'https://rafaelsouzaportfolio.com',
+
+          images: [
+            {
+              url: project.thumbnail,
+
+              alt: `${project.title}`,
+            },
+          ],
+        }}
+      />
       <Header />
       <ProjectBanner
         title={project.title}

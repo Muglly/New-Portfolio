@@ -10931,6 +10931,17 @@ eslint@latest:
   languageName: node
   linkType: hard
 
+"next-seo@npm:^5.15.0":
+  version: 5.15.0
+  resolution: "next-seo@npm:5.15.0"
+  peerDependencies:
+    next: ^8.1.1-canary.54 || >=9.0.0
+    react: ">=16.0.0"
+    react-dom: ">=16.0.0"
+  checksum: 05b0769d9c9abcc6a0179e5d724e87b1a3a7591a9c2caa4ef5b791769fcf868cb97fbcd90264106101cf7fbc073b0375ab90026aa519d2e899fbabea12cafbfb
+  languageName: node
+  linkType: hard
+
 "next@npm:13.0.6":
   version: 13.0.6
   resolution: "next@npm:13.0.6"
@@ -11872,6 +11883,7 @@ eslint@latest:
     lint-staged: ^13.1.0
     next: 13.0.6
     next-pwa: ^5.6.0
+    next-seo: ^5.15.0
     polished: ^4.2.2
     prettier: 2.8.1
     react: 18.2.0

@@ -6,10 +6,28 @@ import { Knowledge } from 'components/Knowledge';
 import { ProjectsProps, SectionProject } from 'components/SectionProject';
 
 import * as S from './styles';
+import { NextSeo } from 'next-seo';
 
 export function HomeTemplate({ projects }: ProjectsProps) {
   return (
     <S.Container>
+      <NextSeo
+        title="Home | Rafael Souza"
+        description="Meu portfolio, onde faço um breve resumo sobre mim e mostros algus projetos que já fiz."
+        canonical="https://rafaelsouza.vercel.app/"
+        openGraph={{
+          url: 'https://rafaelsouza.vercel.app/',
+          images: [
+            {
+              url: 'https://raw.githubusercontent.com/Muglly/New-Portfolio/master/public/img/Home.PNG',
+              width: 1280,
+              height: 720,
+              alt: 'Rafael Souza | Portfolio',
+            },
+          ],
+          site_name: 'Rafael Souza | Portfolio',
+        }}
+      />
       <Header />
 
       <main className="container">
