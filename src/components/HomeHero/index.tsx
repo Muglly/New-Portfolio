@@ -6,7 +6,7 @@ import * as S from './styles';
 
 export function HomeHero() {
   return (
-    <S.Container>
+    <S.Container data-aos="fade-up">
       <Image src={me} alt="Rafael Souza" width={640} />
       <div>
         <S.TextContainer>
@@ -17,7 +17,7 @@ export function HomeHero() {
         </S.TextContainer>
 
         <S.InfoContainer>
-          <S.CodeItem>
+          <S.CodeItem data-aos="zoom-in">
             <span className="comment">//Minha apresentação</span>
             <span className="purple">Infos</span> {'\u007B'}
             <div>
@@ -28,7 +28,7 @@ export function HomeHero() {
             </div>
             {'\u007D'},
           </S.CodeItem>
-          <S.CodeItem>
+          <S.CodeItem data-aos="zoom-in">
             {'\u007B'}
             <div>
               Cargo: <span className="blue">Dev Front-end,</span>

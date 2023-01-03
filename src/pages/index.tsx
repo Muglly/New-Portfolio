@@ -1,3 +1,6 @@
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 import Prismic from '@prismicio/client';
 import { GetStaticProps } from 'next/types';
 import { getPrismicClient } from 'services/prismic';
@@ -5,6 +8,10 @@ import { ProjectsProps } from 'components/SectionProject';
 import { HomeTemplate } from 'templates/Home/HomeTemplate';
 
 export default function Home({ projects }: ProjectsProps) {
+  useEffect(() => {
+    Aos.init({ duration: 1500 });
+  }, []);
+
   return <HomeTemplate projects={projects} />;
 }
 

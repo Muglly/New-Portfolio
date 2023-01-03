@@ -8,7 +8,7 @@ type KnowProps = {
 
 export default function KnowItem({ title, icon }: KnowProps) {
   return (
-    <S.KnowContainer>
+    <S.KnowContainer data-aos="fade-up">
       <p>{title}</p>
       {icon}
     </S.KnowContainer>

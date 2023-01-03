@@ -3,7 +3,7 @@ import * as S from './styles';
 export function AboutItem() {
   return (
     <S.ItemContainer>
-      <div>
+      <div data-aos="fade-left">
         <p>
           Olá, me chamo Rafael Souza, apaixonado por tecnologia e desenvolvo
           aplicações Front-end.
@@ -12,7 +12,7 @@ export function AboutItem() {
         </p>
       </div>
 
-      <div>
+      <div data-aos="fade-right">
         <p>
           Desenvolvo projetos tanto para Web 🌐 com <strong>React.js</strong>,
           quanto para mobile 📱 de forma nativa com
@@ -21,7 +21,7 @@ export function AboutItem() {
         </p>
       </div>
 
-      <div>
+      <div data-aos="fade-left">
         <p>
           Me considero ágil e
           <strong> consistente para aprender uma nova tecnologia</strong>, e
@@ -30,7 +30,7 @@ export function AboutItem() {
         </p>
       </div>
 
-      <div>
+      <div data-aos="fade-right">
         <p>
           Se eu pudesse me definir em 3 palavras, certamente seriam:
           <strong> otimista</strong>, <strong>criativo</strong> e

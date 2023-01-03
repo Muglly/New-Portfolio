@@ -17,8 +17,10 @@ export function Footer() {
   return (
     <S.Container>
       <div className="container">
-        <button onClick={handleScrollTop}>Voltar ao topo</button>
-        <section>
+        <button onClick={handleScrollTop} data-aos="fade-right">
+          Voltar ao topo
+        </button>
+        <section data-aos="fade-left">
           <AiFillMail
             onClick={() => handleRedirect('mailto:rpsouza.dev@gmail.com')}
           />
