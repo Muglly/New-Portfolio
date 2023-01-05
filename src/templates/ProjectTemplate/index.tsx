@@ -40,7 +40,7 @@ export function ProjectTemplate({ project }: ProjectProps) {
             <Link href={project.link}> Ver projeto online</Link>
           </button>
           <button>
-            <Link href={project.repositorio}> Ver repsitório</Link>
+            <Link href={project.repositorio}> Ver repositório</Link>
           </button>
         </div>
       </main>
